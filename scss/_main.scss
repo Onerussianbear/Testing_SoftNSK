@@ -1,0 +1,862 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Main section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.main{
+    position: relative;
+    top: 0;
+
+
+    background: no-repeat center/cover url(/img/main/bg-layer.png) #272733;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ordering{
+        margin: 121px 0 151px 0;
+        @include breakpoint (lg){
+            margin: 80px 0 100px 0;
+        }
+        @include breakpoint (md){
+            margin: 50px 0 80px 0;
+        }
+
+        .ordering__title{       /* <<<< Заголовок*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font-weight: 700;
+                font-size: 36px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                @include breakpoint (lg){
+                    font-size: 30px;
+                }
+                @include breakpoint (md){
+                    font-size: 26px;
+                    max-width: 200px;
+                    text-align: center;
+                }
+                span{
+                    color: #3e9cdc;
+                }
+            }
+            p{
+                margin: 30px 0 0 0;
+
+                font-weight: normal;
+                font-size: 18px;
+                color: #BBBBBB;
+                @include breakpoint (md){
+                    margin: 15px 0 0 0;
+                    text-align: center;
+                }
+            }
+        }
+        .ordering__icons{      /* <<<< иконки*/
+            margin: 80px 0 0 0;
+            position: relative;
+            top: 0;
+            z-index: 2;
+
+            display: grid;
+            grid-template-columns: repeat(5, minmax(100px, 230px));
+            justify-content: center;
+            @include breakpoint (lg){
+                margin: 40px 0 0 0;
+            }
+            @include breakpoint (md){
+                display: flex;
+                flex-direction: column;
+            }
+            .icons__items{
+                margin: 0 20px 0 20px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include breakpoint (lg){
+                    margin: 0 15px 0 15px;
+                }
+                @include breakpoint (md){
+                    margin: 30px 0 30px 0;
+                }
+                
+                .icons__img__block{
+                    width: 100px;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #3E9CDC;
+                    border: 5px solid #286690;
+                    border-radius: 50px;
+                    transition: ease .5s;
+                    &:hover{
+                        
+                    }
+
+                    @include breakpoint (lg) {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    @include breakpoint (md){
+                        width: 100px;
+                        height: 100px;
+                    }
+                
+                    .icons__img{}
+                    .icon-1{
+                        max-width: 33px;
+                        @include breakpoint (xl){
+                            max-width: 27px;
+                        }
+                        @include breakpoint (lg){
+                            max-width: 23px;
+                        }
+                        @include breakpoint (md){
+                            max-width: 33px;
+                        }
+                    }
+                    .icon-2{
+                        max-width: 30.8px;
+                        @include breakpoint (xl){
+                            max-width: 24px;
+                        }
+                        @include breakpoint (lg){
+                            max-width: 20.8px;
+                        }
+                        @include breakpoint (md){
+                            max-width: 30.8px;
+                        }
+                    }
+                    .icon-3{
+                        max-width: 38.2px;
+                        @include breakpoint (xl){
+                            max-width: 32px;
+                        }
+                        @include breakpoint (lg){
+                            max-width: 22.2px;
+                        }
+                        @include breakpoint (md){
+                            max-width: 38.2px;
+                        }
+                    }
+                    .icon-4{
+                        max-width: 36px;
+                        @include breakpoint (xl){
+                            max-width: 30px;
+                        }
+                        @include breakpoint (lg){
+                            max-width: 26px;
+                        }
+                        @include breakpoint (md){
+                            max-width: 36px;
+                        }
+                    }
+                    .icon-5{
+                        max-width: 38.5px;
+                        @include breakpoint (xl){
+                            max-width: 33px;
+                        }
+                        @include breakpoint (lg){
+                            max-width: 28.5px;
+                        }
+                        @include breakpoint (md){
+                            max-width: 38.5px;
+                        }
+                    }
+                }
+                .icons__text{
+                    margin: 20px 0 0 0;
+                    @include breakpoint (lg) {
+                        margin: 10px 0 0 0;
+                    }
+                    p{
+                        font-weight: normal;
+                        font-size: 16px;
+                        text-align: center;
+                        color: #FFFFFF;
+                        @include breakpoint (xl){
+                            font-size: 14px;
+                        }
+                        @include breakpoint (lg) {
+                            font-size: 16px;
+                        }
+                        @include breakpoint (md){
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+            .item-1{
+                position: relative;
+                &::after,
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background-color: #C4C4C4;
+                    border-radius: 50px;
+                }
+                &::after{
+                    top: 47px;
+                    right: 25px;
+                    @include breakpoint (xl){
+                        right: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        right: 0;
+                    }
+                    @include breakpoint (md){
+                        top: 10px;
+                        left: 0px;
+                        position: relative;
+                    }
+                }
+                &::before{
+                    top: 47px;
+                    right: -5px;
+                    @include breakpoint (xl){
+                        right: -10px;
+                    }
+                    @include breakpoint (lg){
+                        opacity: 0;
+                    }
+                    @include breakpoint (md){
+                        top: 165px;
+                        right: 0;
+                        opacity: 1;
+                        position: relative;
+                    }
+                }
+            }
+            .item-2{
+                position: relative;
+                &::after,
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background-color: #C4C4C4;
+                    border-radius: 50px;
+                }
+                &::after{
+                    top: 47px;
+                    right: 20px;
+                    @include breakpoint (xl){
+                        right: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        right: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: 10px;
+                        right: 0;
+                        position: relative;
+                    }
+                }
+                &::before{
+                    top: 47px;
+                    left: 20px;
+                    @include breakpoint (xl){
+                        left: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        left: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: 0;
+                        left: 0;
+                        position: relative;
+                    }
+                }
+                .dots{
+                    position: relative;
+                    &::after,
+                    &::before{
+                        position: absolute;
+                        display: block;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: #C4C4C4;
+                        border-radius: 50px;
+                    }
+                    &::after{
+                        top: 47px;
+                        right: 100px;
+                        @include breakpoint (xl){
+                            right: 85px;
+                        }
+                        @include breakpoint (lg){
+                            top: 42px;
+                            right: 70px;
+                        }
+                        @include breakpoint (md){
+                            top: 165px;
+                            right: 0;
+                            position: relative;
+                        }
+
+                    }
+                    &::before{
+                        top: 47px;
+                        left: 100px;
+                        @include breakpoint (xl){
+                            left: 85px;
+                        }
+                        @include breakpoint (lg){
+                            opacity: 0;
+                        }
+                        @include breakpoint (md){
+                            opacity: 1;
+                            left: 0;
+                            top: -25px;
+                            position: relative;
+                        }
+
+                    }
+        
+                }
+            }
+            .item-3{
+                position: relative;
+                &::after,
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background-color: #C4C4C4;
+                    border-radius: 50px;
+                }
+                &::after{
+                    top: 47px;
+                    right: 20px;
+                    @include breakpoint (xl){
+                        right: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        right: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: 10px;
+                        right: 0;
+                        position: relative;
+                    }
+                }
+                &::before{
+                    top: 47px;
+                    left: 20px;
+                    @include breakpoint (xl){
+                        left: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        left: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: 0;
+                        left: 0;
+                        position: relative;
+                    }
+                }
+                .dots{
+                    position: relative;
+                    &::after,
+                    &::before{
+                        position: absolute;
+                        display: block;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: #C4C4C4;
+                        border-radius: 50px;
+                    }
+                    &::after{
+                        top: 47px;
+                        right: 100px;
+                        @include breakpoint (xl){
+                            right: 85px;
+                        }
+                        @include breakpoint (lg){
+                            top: 42px;
+                            right: 70px;
+                        }
+                        @include breakpoint (md){
+                            top: 165px;
+                            right: 0;
+                            position: relative;
+                        }
+                    }
+                    &::before{
+                        top: 47px;
+                        left: 100px;
+                        @include breakpoint (xl){
+                            left: 85px;
+                        }
+                        @include breakpoint (lg){
+                            opacity: 0;
+                        }
+                        @include breakpoint (md){
+                            opacity: 1;
+                            left: 0;
+                            top: -25px;
+                            position: relative;
+                        }
+                    }
+        
+                }
+            }
+            .item-4{
+                position: relative;
+                &::after,
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background-color: #C4C4C4;
+                    border-radius: 50px;
+                }
+                &::after{
+                    top: 47px;
+                    right: 20px;
+                    @include breakpoint (xl){
+                        right: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        right: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: 10px;
+                        right: 0;
+                        position: relative;
+                    }
+                }
+                &::before{
+                    top: 47px;
+                    left: 20px;
+                    @include breakpoint (xl){
+                        left: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        left: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: 0;
+                        left: 0;
+                        position: relative;
+                    }
+                }
+                .dots{
+                    position: relative;
+                    &::after,
+                    &::before{
+                        position: absolute;
+                        display: block;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: #C4C4C4;
+                        border-radius: 50px;
+                    }
+                    &::after{
+                        top: 47px;
+                        right: 100px;
+                        @include breakpoint (xl){
+                            right: 85px;
+                        }
+                        @include breakpoint (lg){
+                            top: 42px;
+                            right: 70px;
+                        }
+                        @include breakpoint (md){
+                            top: 165px;
+                            right: 0;
+                            position: relative;
+                        }
+                    }
+                    &::before{
+                        top: 47px;
+                        left: 100px;
+                        @include breakpoint (xl){
+                            left: 85px;
+                        }
+                        @include breakpoint (lg){
+                            top: 42px;
+                            left: 70px;
+                        }
+                        @include breakpoint (md){
+                            opacity: 1;
+                            left: 0;
+                            top: -25px;
+                            position: relative;
+                        }
+                    }
+        
+                }
+            }
+            .item-5{
+                position: relative;
+                &::after,
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background-color: #C4C4C4;
+                    border-radius: 50px;
+                }
+                &::after{
+                    top: 47px;
+                    left: 25px;
+                    @include breakpoint (xl){
+                        left: 10px;
+                    }
+                    @include breakpoint (lg){
+                        top: 42px;
+                        left: 0px;
+                    }
+                    @include breakpoint (md){
+                        top: -160px;
+                        left: 0px;
+                        position: relative;
+                    }
+                }
+                &::before{
+                    top: 47px;
+                    left: -5px;
+                    @include breakpoint (xl){
+                        left: -10px;
+                    }
+                    @include breakpoint (lg){
+                        opacity: 0;
+                    }
+                    @include breakpoint (md){
+                        opacity: 1;
+                        top: -20px;
+                        left: 0px;
+                        position: relative;
+                    }
+                }
+            }
+
+        }
+        .ordering__form{
+            margin: 80px 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include breakpoint (lg){
+                margin: 40px 0 0 0;
+
+            }
+
+            .form{      /* <<<<<<< Форма*/
+                max-width: 1170px;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(200px, 370px));
+                grid-template-rows: 48px 63px 48px;
+                gap: 30px;
+                grid-template-areas: 
+                "sistems input-email input-name"
+                "scrolling scrolling file"
+                ". button .";
+                @include breakpoint (md){
+                    justify-content: center;
+                    grid-template-columns: repeat(2, minmax(100px, 200px));
+                    grid-template-rows: 48px 48px 48px 60px 48px;
+                    grid-template-areas: 
+                    "input-email input-email"
+                    "input-name input-name"
+                    "sistems sistems"
+                    "scrolling scrolling"
+                    "button  file";
+
+                }
+
+                .sistems{
+                    grid-area: sistems;
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.85);
+                    border: 1px solid #FFFFFF;
+                    border-radius: 3px;
+                    padding: 0 0 0 10px;
+                    font-weight: normal;
+                    font-size: 18px;
+                    color: #272733;
+                    transition: ease .2s;
+                    @include breakpoint (lg){
+                        font-size: 16px;
+                    }
+                    &.active{
+                        background-color: #3D4050D9;
+                        border: 1px solid #3D4050D9;
+                        color: #FFFFFF;
+
+                    }
+                    .arrow{
+                        position: relative;
+                        bottom: 5px;
+                        margin: 0 14px 0 0;
+                        width: 5px;
+                        height: 5px;
+                        border: solid #000000;
+                        border-width: 0 1.5px 1.5px 0;
+                        display: inline-block;
+                        padding: 3px;
+                        transform: rotate(45deg);
+                        transition: ease .2s;
+                        &.active{
+                            bottom: 0;
+                            border: solid #FFFFFF;
+                            border-width: 0 1.5px 1.5px 0;
+                            transform: rotate(-135deg);
+
+
+                        }
+                    }
+                    .sistems__menu{
+                        display: none;
+                        position: absolute;
+                        top: 47px;
+                        left: 0;
+                        width: 100%;
+                        max-height: 179px;
+                        background: rgba(39, 39, 51, 1);
+                        border: 2px solid #3D4050;
+                        box-sizing: border-box;
+                        border-radius: 3px;
+                        transition: ease .2s;
+                        overflow-y: auto;
+                        scrollbar-color: #3E9CDC #3D4050;
+                        z-index: 3;
+                        
+                        &::-webkit-scrollbar {
+                            width: 7px; 
+                            
+                        }
+                        &::-webkit-scrollbar-track{
+                            background: #3D4050;
+                            border-radius: 3px;
+                        }
+                        &::-webkit-scrollbar-thumb{
+                            background-color: #3E9CDC;
+                            border-radius: 3px;
+                        }
+                        
+
+                        &.active{
+                            display: block;
+                            
+                        }
+                        li{
+                            padding: 6px 20px 6px 10px;
+                            font-weight: normal;
+                            font-size: 18px;
+                            color: #FFFFFF;
+                            @include breakpoint (xl){
+                                padding: 6px 15px 6px 10px;
+                                font-size: 16px;
+                            }
+                            @include breakpoint (lg){
+                                padding: 6px 10px 6px 10px;
+                                font-size: 13px;
+                            }
+                            &:hover{
+                                color: #42A9ED;
+                                transition: ease .3s;
+
+                            }
+                        }
+                    }
+                }
+                .input-email{
+                    grid-area: input-email;
+                    background: rgba(255, 255, 255, 0.85);
+                    border: 1px solid #FFFFFF;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    font-weight: normal;
+                    font-size: 18px;  
+                    color: #272733;
+                    text-indent: 10px;
+                    outline:none;
+                    @include breakpoint (lg){
+                        font-size: 16px;
+                    }
+                    
+                }
+                .input-name{
+                    grid-area: input-name;
+                    background: rgba(255, 255, 255, 0.85);
+                    border: 1px solid #FFFFFF;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    font-weight: normal;
+                    font-size: 18px;  
+                    color: #272733;
+                    text-indent: 10px;
+                    outline:none;
+                    @include breakpoint (lg){
+                        font-size: 16px;
+                    }
+                    
+                }
+                .slider__block{
+                    grid-area: scrolling;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .slader-label{
+                        font-weight: normal;
+                        font-size: 18px;
+                        color: #FFFFFF;
+                    }
+                    p{
+                        font-weight: 600;
+                        font-size: 18px;
+                        text-align: right;
+                        color: rgba(255, 255, 255, 0.85);
+                    }
+
+                    .slider{
+                        margin: 0px 0 0 0;
+                        appearance: none;
+                        width: 100%;
+                        height: 6px;
+                        background: rgba(255, 255, 255, 0.7);
+                        border: 1px solid #FFFFFF;
+                        border-radius: 5px;
+                        &::-webkit-slider-thumb{
+                            appearance: none;
+                            width: 23.7px;
+                            height: 23.7px;
+                            border-radius: 50px;
+                            background: #42A9ED;
+                            border: 3px solid #286690;
+                        }
+                    }
+                    @include breakpoint (lg){
+                        .slader-label{
+                            font-size: 13px;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .file__block{
+                    grid-area: file;
+                    position: relative;
+                    height: 48px;
+                    background: #FFFFFF;
+                    border: 2px solid #3E9CDC;
+                    border-radius: 3px;
+                    transition: ease .5s;
+                    @include breakpoint (md){
+                        max-width: 50px;
+                    }
+                    .file{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        font-size: 0;
+                        cursor: pointer;
+                    }
+                    .file__btn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 13px 0;
+                        .file__icon{
+                            width: 17.4px;
+                            margin: 0 10px 0 0;
+                            @include breakpoint (md){
+                                width: 25px;
+                                margin: 0;
+                                position: relative;
+                                bottom: 5px;
+                            }
+                            .file-icon-2{
+                                display: none;
+                            }
+                        }
+                        p{
+                            font-weight: 600;
+                            font-size: 15px;
+                            color: #272733;
+                            text-transform: uppercase;
+                            transition: ease .5s;
+                            @include breakpoint (lg){
+                                font-size: 13px;
+                            }
+                            @include breakpoint (md){
+                                display: none;
+                            }
+                            
+
+                        }
+                    }
+                    &:hover{
+                        background: #3E9CDC;
+                        .file__btn{
+                            padding: 14px 0;
+                        }
+                        p{
+                            color: #FFFFFF;
+                        }
+                        .file__icon{
+                            transition: ease .5s;
+                            .file-icon-1{
+                                display: none;
+                            }
+                            .file-icon-2{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .form__btn{
+                    grid-area: button;
+                    
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    background: #3E9CDC;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 4px;
+                    transition: ease .5s;
+                    @include breakpoint (lg){
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        background: #255c82;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Main section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

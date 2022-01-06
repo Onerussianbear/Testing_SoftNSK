@@ -1,0 +1,181 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Footer section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.footer{
+    height: 80px;
+
+    background-color: #3D4050;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+    font-size: 13px;
+    @include breakpoint (xl){
+        align-items: center;
+        flex-wrap: wrap;
+        .copyright{
+            order: 1;
+        }
+        .payment{     
+            &::after{
+                display: none!important;
+            }
+            &::before{
+                height: 30px!important;
+                right: -150px!important;
+            }
+        }
+    }
+    @include breakpoint (lg){
+        .payment{
+            &::before{
+                height: 50px!important;
+                right: -30px!important;
+            }
+        }
+    }
+
+
+    .copyright{
+        color: #FFFFFF;
+        span{
+            text-transform: uppercase;
+        }
+        @include breakpoint (xl){
+            font-size: 10px;
+        }
+    }
+    .payment{
+        position: relative;
+        display: flex;
+        color: #C3C3C3;
+        .qiwi{
+            margin: 0 38px 0 0;
+
+            display: flex;
+            align-items: center;
+            .qiwi-icon{
+                margin: 0 10px 0 0;
+                width: 20px;
+            }
+        }
+        .yandexmoney{
+            margin: 0 38px 0 0;
+
+            display: flex;
+            align-items: center;
+            .yandexmoney-icon{
+                margin: 0 10px 0 0;
+                width: 13.4px;
+            }
+        }
+        .webmoney{
+            display: flex;
+            align-items: center;
+            .webmoney-icon{
+                margin: 0 10px 0 0;
+                width: 18px;
+            }
+        }
+        &::after,
+        &::before{
+            position: absolute;
+            display: block;
+            content: '';
+            width: 1px;
+            height: 18px;
+            background-color: #C3C3C3;
+        }
+        &::after{
+            top: 0;
+            left: -50px;
+        }
+        &::before{
+            top: 0;
+            right: -50px;
+        }
+    }
+    .contacts{
+        display: flex;
+
+        .contacts__mail{
+            margin: 0 38px 0 0;
+
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            transition: ease .5s;
+            .mail-icon{
+                margin: 0 10px 0 0;
+                width: 15px;
+            }
+            &:hover{
+                color: #3e9cdc;
+            }
+        }
+        .contacts__vk{
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            transition: ease .5s;
+            .vk-icon{
+                margin: 0 10px 0 0;
+                width: 10.4px;
+            }
+            &:hover{
+                color: #3e9cdc;
+            }
+        }
+    }
+}
+@include breakpoint (xl){
+    .footer{
+        .copyright{
+            width: 100%;
+            order: 1;
+        }
+        .payment{}
+        .contacts{}
+    }
+}
+
+@include breakpoint (md){
+    .footer{
+        height: 150px;
+        display: flex;
+        .copyright{
+            
+        }
+        .payment{
+            display: flex;
+            flex-direction: column;
+            &::before{
+                display: none!important;
+            }
+            .qiwi{
+                margin: 5px 0;
+                .qiwi-icon{}
+            }
+            .yandexmoney{
+                margin: 5px 0;
+                .yandexmoney-icon{
+                    margin: 0 15px 0 0;
+                }
+            }
+            .webmoney{
+                margin: 5px 0;
+                .webmoney-icon{}
+            }
+        }
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .contacts__mail{
+                margin: 5px 0 10px 0;
+            }
+            .contacts__vk{
+                margin: 5px 0;
+
+            }
+        }
+    }
+}

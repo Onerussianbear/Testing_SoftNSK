@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin-top: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p, a, ul, li{
+	padding: 0;
+	margin: 0;
+}
+ul li{
+	list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+section, header, footer {
+    padding: 0 15px;
+  }
+  
+  @media (min-width: 575.98px){
+    section, header, footer {
+      padding: 0 calc(50vw - 270px);
+    }
+  }
+  
+  @media (min-width: 767.98px){
+    section, header, footer {
+      padding: 0 calc(50vw - 360px);
+    }
+  }
+  
+  @media (min-width: 991.98px) {
+    section, header, footer {
+      padding: 0 calc(50vw - 480px);
+    }
+  }
+  
+  @media (min-width: 1199.98px){
+    section, header, footer {
+      padding: 0 calc(50vw - 590px);
+    }
+  }
+
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media (max-width: 1200px) {@content;}
+  }
+  @else if $point == lg {
+    @media (max-width: 991px) {@content;}
+  }
+  @else if $point == md {
+    @media (max-width: 767px) {@content;}
+  }
+  @else if $point == sm {
+    @media (max-width: 576px) {@content;}
+  }
+  @else if $point == xs {
+    @media (max-width: 320px) {@content;}
+  }
+}
+
+ 

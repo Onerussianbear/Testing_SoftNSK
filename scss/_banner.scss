@@ -1,0 +1,21 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Banner >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.banner{
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background-color: rgb(199, 199, 199);
+    @include breakpoint (lg){
+        display: none;
+    }    
+}
+.banner-w-991{
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background-color: rgb(199, 199, 199);
+    @include breakpoint (lg){
+        display: block;
+    }
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Banner >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

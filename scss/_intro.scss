@@ -1,0 +1,129 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Intro >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.intro{
+    position: relative;
+    top: 0;
+    z-index: 3;
+
+    .intro__block{
+        padding: 203px 0 202px 0;
+        @include breakpoint (lg){
+            padding: 150px 0 80px 0;
+        }
+        @include breakpoint (md){
+            padding: 100px 0 80px;
+        }
+
+        .intro__title{
+            max-width: 780px;
+
+            font-weight: bold;
+            font-size: 48px;
+            text-transform: uppercase;
+            color: #000000;
+            span{
+                color: #3E9CDC;
+            }
+            @include breakpoint (lg){
+                font-size: 36px;
+            }
+            @include breakpoint (md){
+                font-size: 26px;
+            }
+        }
+        .intro__subtitle{
+            margin: 80px 0 0 0;
+
+            font-weight: bold;
+            font-size: 20px;
+            color: #000000;
+            @include breakpoint (lg){
+                margin: 40px 0 0 0;
+                font-size: 16px;
+            }
+            @include breakpoint (md){
+                margin: 20px 0 0 0;
+            }
+            li{
+                margin: 5px 0 0 25px;
+
+                position: relative;
+                font-weight: normal;
+                &::before{
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: -17px;
+                    width: 7px;
+                    height: 2px;
+                    background-color: #000000;
+                }
+            }
+            .li-mg{
+                margin: 10px 0 0 25px;
+            }
+        }
+        .button__block{
+            margin: 80px 0 0 0;
+            @include breakpoint (lg){
+                margin: 60px 0 0 0;
+            }
+            @include breakpoint (md){
+                margin: 40px 0 0 0;
+
+                display: flex;
+                justify-content: center;
+            }
+            .order{
+                margin: 0 30px 0 0;
+                padding: 15px 60px;
+                max-width: 160px;
+                font-weight: normal;
+                font-size: 13px;
+                text-transform: uppercase;
+
+                color: #FFFFFF;
+                background: #3E9CDC;
+                border: 1px solid #3E9CDC;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: ease .5s;
+                @include breakpoint (lg){
+                    padding: 15px 40px;
+                    font-size: 13px;
+                }
+                @include breakpoint (md){
+                    margin: 0 10px 0 0;
+                }
+                &:hover{
+                    background: #3787bd;
+                    border: 1px solid #3787bd;
+                    box-shadow: 0 0 5px 1px #08a9da;
+
+                }
+                &:active{
+                    box-shadow: 0 0 5px 1px #00000072;
+                }
+            }
+            .more{
+                padding: 15px 60px;
+                font-weight: normal;
+                font-size: 13px;
+                text-transform: uppercase;
+                
+                color: #2A2B30;
+                background: #FFFFFF;
+                border: 1px solid #6F6D7B;
+                border-radius: 4px;
+                transition: ease .5s;
+                @include breakpoint (lg){
+                    padding: 15px 30px;
+                }
+                &:hover{
+                    border: 1px solid #000000;
+                }
+            }
+        }
+    }
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Intro >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

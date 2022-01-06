@@ -1,0 +1,184 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@include breakpoint (md){
+    body{
+        &.lock{
+            overflow: hidden;
+        }
+    }
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(16, 16, 29, 0.9);
+    z-index: 10;
+    @include breakpoint (md){
+        height: 50px;
+    }
+    .logo{
+        h1{
+            position: relative;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            color: #ffffff;
+            z-index: 10;
+            span{
+                color: #3E9CDC;
+            }
+            @include breakpoint (md){
+                font-size: 18px;
+            }
+        }
+    }
+    .header__menu{
+        .header__list{
+            display: flex;
+            .header__link{
+                margin: 0 60px 0 0;
+
+                font-weight: 600;
+                font-size: 13px;
+                text-transform: uppercase;
+                color: #ffffff;
+                transition: ease .5s;
+                &:hover{
+                    color: #43ABF0;
+                }
+            }
+            .mg-no{
+                margin: 0;
+            }
+            @include breakpoint (xl){
+                display: block;
+                position: absolute;
+                top: 100px;
+                left: -100%;
+                height: 2000px;
+                width: 50%;
+                background-color: rgba(16, 16, 29, 0.9);
+                z-index: 10;
+                display: flex;
+                flex-direction: column;
+                padding: 0 0 0 100px;
+                transition: ease .5s;
+                &.active{
+                    left: 0;
+                }
+                li{
+                    padding: 30px 0;
+                }
+                .header__link{
+                    text-align: end;
+                    font-size: 20px;
+                    transition: ease .2s;
+                    &:link, &:active, &:hover{
+                        color: #43ABF0;
+                    }
+                }
+            }
+            @include breakpoint (md){
+                position: fixed;
+                top: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(16, 16, 29, 0.9);
+                left: 0;
+                display: flex;
+                align-items: center;
+                padding: 0;
+                z-index: 0;
+                .header__link{
+                    opacity: 0;
+                    margin: 0;
+                }
+                &.active{
+                    top: 49px;
+                    .header__link{
+                        opacity: 1;
+                    }
+                }
+
+            }
+        }
+    }
+    .header__burger{
+        display: none;
+        @include breakpoint (xl){
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 30px;
+            z-index: 10;
+            @include breakpoint (md){
+                width: 30px;
+                height: 20px;
+            }
+            span{
+                position: absolute;
+                top: 13px;
+                left: 0;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 4px;
+                background-color: #3E9CDC;
+                transition: ease .5s;
+                @include breakpoint (md){
+                    top: 9px;
+                    height: 2px;
+                }
+            }
+            &::after,
+            &::before{
+                position: absolute;
+                left: 0;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 4px;
+                background-color: #3E9CDC;
+                transition: ease .5s;
+                @include breakpoint (md){
+                    height: 2px;
+                }
+            }
+            &::after{
+                top: 0;
+            }
+            &::before{
+                bottom: 0;
+            }
+            &.active{
+                span{
+                    transform: scale(0);
+                }
+                &::after{
+                    transform: rotate(45deg);
+                    top: 13.5px;
+                    @include breakpoint (md){
+                        top: 9px;
+                    }
+                }
+                &::before{
+                    transform: rotate(-45deg);
+                    bottom: 13.5px;
+                    @include breakpoint (md){
+                        top: 9px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<< Header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
